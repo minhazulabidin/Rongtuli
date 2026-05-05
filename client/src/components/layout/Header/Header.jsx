@@ -2,96 +2,53 @@ import Container from "@/components/commonCompo/Container";
 import React from "react";
 import logo from "@/assate/image/logo.png";
 import Image from "next/image";
+import { Heart, Search, ShoppingBasket, User } from "lucide-react";
 
 const Header = () => {
   return (
     <Container>
-      <header className="flex items-center justify-between py-8.25 font-poppins">
-        {/* Logo Section */}
-        <div className="">
-          <Image src={logo} alt="logo" className="w-30 h-15" />
+      <header className="flex flex-wrap items-center justify-between px-3 md:px-0 py-4 md:py-8.25 font-poppins gap-y-4">
+      
+        <div className="order-1">
+          <Image src={logo} width={80} height={80} alt="logo" className="w-24 md:w-32" />
         </div>
 
-        {/* Search Section */}
-        <div className="flex flex-1 max-w-2xl mx-8">
-          <input
-            type="search"
-            placeholder="I'm looking for..."
-            className="flex-1 p-3 text-lg border-gray-100 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-400 placeholder:font-light"
-          />
-          <button className="p-3 bg-orangec/80 rounded-r-md hover:bg-orangec/90 focus:outline-none focus:ring-2 cursor-pointer focus:ring-blue-400">
-            <svg
-              className="w-6 h-6 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
+        <div className="order-3 w-full md:order-2 md:flex-1 md:max-w-2xl md:mx-8">
+          <div className="flex">
+            <input
+              type="search"
+              placeholder="I'm looking for..."
+              className="flex-1 py-2.5 md:py-3.25 px-5 text-base md:text-lg bg-[#F1F1F1] border-gray-100 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-300 placeholder:text-gray-400 placeholder:font-light"
+            />
+            <button className="p-3 bg-orangec/80 rounded-r-md hover:bg-orangec/90 focus:outline-none focus:ring-2 cursor-pointer focus:ring-orange-300 text-white">
+              <Search size={20} />
+            </button>
+          </div>
+        </div>
+
+        {/* 3. Action Icons: Mobile-e logo-r pashe thakbe (order-2) */}
+        <div className="flex items-center gap-4 md:gap-6 order-2 md:order-3">
+          <button className="flex items-center cursor-pointer gap-1">
+            <User size={24} className="md:w-7.5 md:h-7.5" />
+            <span className="text-lg font-normal text-gray-700 hidden lg:block">Login</span>
+          </button>
+
+          <button className="flex items-center gap-1">
+            <Heart size={24} className="md:w-7.5 md:h-7.5" />
+            <span className="text-lg font-normal hidden lg:block text-gray-700">Wishlist</span>
+          </button>
+
+          <button className="flex items-center gap-2 cursor-pointer">
+            <div className="relative">
+              <ShoppingBasket size={24} className="md:w-7.5 md:h-7.5" />
+              <span className="absolute -top-1 -right-2 flex items-center justify-center w-5 h-5 text-[10px] text-white bg-[#FF5D5D] rounded-full">
+                1
+              </span>
+            </div>
+            <span className="text-lg font-normal text-gray-700 hidden md:block">My cart</span>
           </button>
         </div>
 
-        {/* User Actions Section */}
-        <div className="flex items-center gap-6">
-          <button className="flex items-center gap-2 hover:text-blue-500">
-            <svg
-              className="w-7 h-7 text-gray-700"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-              />
-            </svg>
-            <span className="text-lg font-normal text-gray-700">Login</span>
-          </button>
-
-          <button className="flex items-center gap-2 hover:text-blue-500">
-            <svg
-              className="w-7 h-7 text-gray-700"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-            <span className="text-lg font-normal text-gray-700">Wishlist</span>
-          </button>
-
-          <button className="flex items-center gap-2 hover:text-blue-500 relative">
-            <svg
-              className="w-7 h-7 text-gray-700"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-              />
-            </svg>
-            <span className="text-lg font-normal text-gray-700">My cart</span>
-            <span className="absolute -top-1 -right-2 flex items-center justify-center w-5 h-5 text-xs text-white bg-red-500 rounded-full">
-              1
-            </span>
-          </button>
-        </div>
       </header>
     </Container>
   );
