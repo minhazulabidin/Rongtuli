@@ -5,6 +5,7 @@ const layout = ({ children }) => {
   return (
     <div>
       <Header />
+      <hr />
       {children}
     </div>
   );
