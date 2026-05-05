@@ -5,6 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-orangec: var(--orangec);
+  --color-mint: var(--mint);
+  --color-dark-navy: var(--dark-navy);
+  --color-off-white: var(--off-white);
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
   --font-poppins: var(--font-poppins);
@@ -49,6 +53,10 @@
 }
 
 :root {
+  --orangec: #ff6b1a;
+  --mint: #b8e5c8;
+  --dark-navy: #0a1d44;
+  --off-white: #f9f7f2;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
