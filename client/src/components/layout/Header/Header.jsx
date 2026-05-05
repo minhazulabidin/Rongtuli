@@ -9,9 +9,11 @@ const Header = () => {
   return (
     <Container>
       <header className="flex flex-wrap items-center justify-between py-1 md:py-3 font-poppins">
-      
-        <div className="order-1">
-          <Image src={logo} width={100} height={100} alt="logo" className="w-24 md:w-32" />
+
+        <div>
+          <div className="order-1">
+            <Image src={logo} width={100} height={100} alt="logo" className="w-24 md:w-32 object-contain" />
+          </div>
         </div>
 
         <div className="order-3 w-full md:order-2 md:flex-1 md:max-w-2xl md:mx-8">
@@ -53,7 +55,7 @@ const Header = () => {
         </div>
 
       </header>
-          <Navbar/>
+      <Navbar />
     </Container>
   );
 };
