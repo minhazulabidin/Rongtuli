@@ -11,6 +11,7 @@
   --color-off-white: var(--off-white);
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
+  --font-montserrat: var(--font-montserrat);
   --font-poppins: var(--font-poppins);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -152,4 +153,27 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+
+/* ১. সব বুলেটের সাধারণ স্টাইল (সাদা গোল ডট) */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(175, 173, 173) !important; /* ছবির মতো সাদা */
+  opacity: 1 !important;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ২. একটিভ বুলেটের স্টাইল (নীল লম্বা পিল শেপ) */
+.swiper-pagination-bullet-active {
+  width: 20px !important; /* লম্বা করার জন্য */
+  border-radius: 10px !important; /* পিল শেপ */
+  background-color: #ff6b1a !important; /* আপনার ছবির নীল রঙ */
+}
+
+/* ৩. পজিশন ঠিক করার জন্য (ঐচ্ছিক) */
+.swiper-pagination {
+  bottom: 12px !important;
 }
