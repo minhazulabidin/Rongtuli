@@ -1,7 +1,7 @@
 "use client";
 import Container from "@/components/commonCompo/Container";
 import React from "react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import productsData from "../../../../data/productsData";
 import Image from "next/image";
@@ -17,12 +17,16 @@ const Hero = () => {
           <div className=" col-span-2 row-span-2 rounded-[10px]">
             <Swiper
               slidesPerView={1}
-              modules={[Pagination]}
+              modules={[Pagination,Autoplay]}
               loop={true}
               pagination={{
                 clickable: true,
               }}
               spaceBetween={30}
+              autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
               className="h-full"
             >
               {productsData.slice(0, 5).map((product) => (
