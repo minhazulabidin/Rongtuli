@@ -156,24 +156,21 @@
 }
 
 
-/* ১. সব বুলেটের সাধারণ স্টাইল (সাদা গোল ডট) */
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: rgb(175, 173, 173) !important; /* ছবির মতো সাদা */
+  background-color: rgb(175, 173, 173) !important;
   opacity: 1 !important;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
 }
 
-/* ২. একটিভ বুলেটের স্টাইল (নীল লম্বা পিল শেপ) */
 .swiper-pagination-bullet-active {
-  width: 20px !important; /* লম্বা করার জন্য */
-  border-radius: 10px !important; /* পিল শেপ */
-  background-color: #ff6b1a !important; /* আপনার ছবির নীল রঙ */
+  width: 20px !important; 
+  border-radius: 20px !important; 
+  background-color: #ff6b1a !important; 
 }
 
-/* ৩. পজিশন ঠিক করার জন্য (ঐচ্ছিক) */
 .swiper-pagination {
   bottom: 12px !important;
 }

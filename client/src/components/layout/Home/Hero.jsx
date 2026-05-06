@@ -1,14 +1,14 @@
 "use client";
 import Container from "@/components/commonCompo/Container";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import productsData from "../../../../data/productsData";
 import Image from "next/image";
+import groceryImg from "@/assate/image/grocery.png";
+import beautyImg from "@/assate/image/beauty.png";
 
 const Hero = () => {
-  const [products, setProducts] = useState([]);
 
   return (
     <section className="mt-3.25">
@@ -53,11 +53,13 @@ const Hero = () => {
               ))}
             </Swiper>
           </div>
-          <div className="border border-red-200 col-span-1 row-span-1 md:block hidden">
-            Groceries collection
+          <div className="col-span-1 row-span-1 md:block hidden rounded-[10px] relative">
+            <Image src={groceryImg}className="rounded-[10px] w-full h-full"/>
+            <button className="whitespace-nowrap font-montserrat text-[#0198E9] text-xl font-semibold px-8 py-4 bg-[#FAFAFACC]/80 rounded-[5px] absolute bottom-[18.38px] left-1/2 -translate-x-1/2">Groceries collection</button>
           </div>
-          <div className="border border-red-200 col-span-1 row-span-1 md:block hidden">
-            Health & Beauty collection
+          <div className="col-span-1 row-span-1 md:block hidden  rounded-[10px] w-full h-full relative">
+           <Image src={beautyImg} className="rounded-[10px]"/>
+           <button className="font-montserrat text-[#0198E9] text-xl font-semibold px-8 py-4 bg-[#FAFAFACC]/80 rounded-[5px] absolute bottom-[18.38px] left-1/2 -translate-x-1/2 whitespace-nowrap">Health & Beauty collection</button>
           </div>
         </div>
       </Container>
