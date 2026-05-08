@@ -17,16 +17,16 @@ const Hero = () => {
           <div className=" col-span-2 row-span-2 rounded-[10px]">
             <Swiper
               slidesPerView={1}
-              modules={[Pagination,Autoplay]}
+              modules={[Pagination, Autoplay]}
               loop={true}
               pagination={{
                 clickable: true,
               }}
               spaceBetween={30}
               autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
               className="h-full"
             >
               {productsData.slice(0, 5).map((product) => (
@@ -46,6 +46,7 @@ const Hero = () => {
                     </div>
                     <div className="h-full w-full">
                       <Image
+                        alt={product.productName}
                         src={product.productImage}
                         width={10000}
                         height={10000}
@@ -58,12 +59,12 @@ const Hero = () => {
             </Swiper>
           </div>
           <div className="col-span-1 row-span-1 md:block hidden rounded-[10px] relative">
-            <Image src={groceryImg}className="rounded-[10px] w-full h-full"/>
+            <Image alt="" src={groceryImg} className="rounded-[10px] w-full h-full" />
             <button className="whitespace-nowrap font-montserrat text-[#0198E9] text-xl font-semibold px-8 py-4 bg-[#FAFAFACC]/80 rounded-[5px] absolute bottom-[18.38px] left-1/2 -translate-x-1/2">Groceries collection</button>
           </div>
           <div className="col-span-1 row-span-1 md:block hidden  rounded-[10px] w-full h-full relative">
-           <Image src={beautyImg} className="rounded-[10px]"/>
-           <button className="font-montserrat text-[#0198E9] text-xl font-semibold px-8 py-4 bg-[#FAFAFACC]/80 rounded-[5px] absolute bottom-[18.38px] left-1/2 -translate-x-1/2 whitespace-nowrap">Health & Beauty collection</button>
+            <Image alt="" src={beautyImg} className="rounded-[10px]" />
+            <button className="font-montserrat text-[#0198E9] text-xl font-semibold px-8 py-4 bg-[#FAFAFACC]/80 rounded-[5px] absolute bottom-[18.38px] left-1/2 -translate-x-1/2 whitespace-nowrap">Health & Beauty collection</button>
           </div>
         </div>
       </Container>

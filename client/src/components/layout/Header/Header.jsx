@@ -23,7 +23,7 @@ const Header = () => {
               placeholder="I'm looking for..."
               className="flex-1 py-2.5 md:py-3.25 px-5 text-base md:text-lg bg-[#F1F1F1] border-gray-100 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-300 placeholder:text-gray-400 placeholder:font-light"
             />
-            <button className="p-3 bg-orangec/80 rounded-r-md hover:bg-orangec/90 focus:outline-none focus:ring-2 cursor-pointer focus:ring-orange-300 text-white">
+            <button className="bg-orangec/80 rounded-r-md hover:bg-orangec/90 focus:outline-none focus:ring-2 cursor-pointer focus:ring-orange-300 text-white p-3">
               <Search size={20} />
             </button>
           </div>
