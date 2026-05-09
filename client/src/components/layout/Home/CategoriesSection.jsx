@@ -28,7 +28,7 @@ const CategoriesSection = () => {
                         categoriesData.slice(0, 10).map(category => (
                             <div key={category?.slug} className='bg-[#FFFFFF] px-4.5 py-5 flex justify-between drop-shadow-lg items-center rounded-[6px] cursor-pointer'>
                                 <div className='flex items-center gap-2.5'>
-                                    <Image src={category?.icon?.src} alt={category?.name} width={24} height={24} />
+                                    <Image src={category?.icon?.src} alt={category?.name} width={100} height={100} className="w-full h-full" />
                                     <h3 className='text-sm font-poppins text-[#394146]'>{category?.name}</h3>
                                 </div>
                                 <ChevronRight className='text-[#394146]' size={24} />
