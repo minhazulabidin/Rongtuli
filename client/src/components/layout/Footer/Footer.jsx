@@ -1,13 +1,13 @@
 import logo from "@/assate/image/logo.png";
 import Container from '@/components/commonCompo/Container';
 import { Separator } from '@/components/ui/separator';
-import { CreditCard, Headphones } from 'lucide-react';
+import { CreditCard, Headset } from 'lucide-react';
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaLinkedinIn, FaStar, FaTruck, FaTwitter } from 'react-icons/fa';
 import { FaInstagram } from "react-icons/fa6";
 import { RxCounterClockwiseClock } from 'react-icons/rx';
-
+import paymentImg from "@/assate/image/paymentImg.png";
 
 
 const footerDetails = [
@@ -66,7 +66,6 @@ const Footer = () => {
 
             <Container className="">
                 <div className="grid grid-cols-9 gap-10 font-poppins">
-                    {/* Logo & About */}
                     <div className="col-span-3">
                         <Image src={logo} width={100} height={100} alt="logo" className="w-24 md:w-32 object-contain" />
 
@@ -76,90 +75,86 @@ const Footer = () => {
 
                         <div className="mt-5 flex items-center gap-3">
                             <Link href="#">
-                                <FaFacebook size={38} className="text-[#0198E9]"/>
+                                <FaFacebook size={38} className="text-[#0198E9]" />
                             </Link>
                             <Link href="#" className="rounded-full p-2 bg-[#1DA1F2]">
-                                <FaTwitter size={20} className="text-white"/>
+                                <FaTwitter size={20} className="text-white" />
                             </Link>
                             <Link href="#" className="rounded-full p-2 bg-[#0077B5]">
-                                <FaLinkedinIn size={20} className="text-white "/>
+                                <FaLinkedinIn size={20} className="text-white " />
                             </Link>
                             <Link href="#" className="rounded-full p-2 bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]">
-                                <FaInstagram size={20} className="text-white "/>
+                                <FaInstagram size={20} className="text-white " />
                             </Link>
                         </div>
                     </div>
 
-                    {/* Quick Links */}
                     <div className="col-span-2">
-                        <h3 className="mb-5 text-[14px] font-semibold uppercase text-[#444]">
+                        <h4 className="mb-6 text-xl font-medium uppercase text-[#333333]">
                             QUICK LINKS
-                        </h3>
+                        </h4>
 
-                        <ul className="space-y-4 text-[13px] text-[#8b8b8b]">
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                        <ul className="space-y-3 md:text-lg text-base text-[#333333]/80">
+                            <li className="cursor-pointer hover:text-orangec">
                                 About us
                             </li>
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                            <li className="cursor-pointer hover:text-orangec">
                                 Contact us
                             </li>
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                            <li className="cursor-pointer hover:text-orangec">
                                 Products
                             </li>
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                            <li className="cursor-pointer hover:text-orangec">
                                 Login
                             </li>
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                            <li className="cursor-pointer hover:text-orangec">
                                 Sign Up
                             </li>
                         </ul>
                     </div>
 
-                    {/* Customer Area */}
                     <div className="col-span-2">
-                        <h3 className="mb-5 text-[14px] font-semibold uppercase text-[#444]">
+                        <h3 className="mb-6 text-xl font-medium uppercase text-[#333333]">
                             CUSTOMER AREA
                         </h3>
 
-                        <ul className="space-y-4 text-[13px] text-[#8b8b8b]">
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                        <ul className="space-y-3 md:text-lg text-base text-[#333333]/80">
+                            <li className="cursor-pointer hover:text-orangec">
                                 My Account
                             </li>
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                            <li className="cursor-pointer hover:text-orangec">
                                 Orders
                             </li>
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                            <li className="cursor-pointer hover:text-orangec">
                                 Terms
                             </li>
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                            <li className="cursor-pointer hover:text-orangec">
                                 Privacy Policy
                             </li>
-                            <li className="cursor-pointer hover:text-[#3aa0e6]">
+                            <li className="cursor-pointer hover:text-orangec">
                                 Shipping Information
                             </li>
                         </ul>
                     </div>
 
-                    {/* Contact */}
                     <div className="col-span-2">
-                        <h3 className="mb-5 text-[14px] font-semibold uppercase text-[#444]">
+                        <h3 className="mb-6 text-xl font-medium uppercase text-[#333333]">
                             CONTACT
                         </h3>
 
-                        <p className="max-w-[230px] text-[13px] leading-6 text-[#8b8b8b]">
+                        <p className="text-base leading-6 text-[#333333]/80">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor
                         </p>
 
-                        <div className="mt-6 flex items-center gap-3">
-                            <Headphones className="text-[#8b8b8b]" size={38} />
-
+                        <div className="mt-7.75 flex items-center gap-6.75">
+                            <Headset className="text-orangec" size={51} />
                             <div>
-                                <p className="text-[13px] text-[#8b8b8b]">
+                                <p className="text-lg text-[#333333]">
                                     Have any question?
                                 </p>
 
-                                <h2 className="text-[30px] font-bold leading-none text-[#1d9bf0]">
+                                <h2 className="text-[30px] font-bold leading-none text-orangec mt-1.5">
                                     099 456 789
                                 </h2>
                             </div>
@@ -167,27 +162,18 @@ const Footer = () => {
                     </div>
                 </div>
             </Container>
+            <Separator className="mt-12.5 mb-5" />
 
-            {/* Bottom Footer */}
-            <div>
-                <div className="mx-auto flex max-w-[1200px] items-center justify-between px-8 py-4">
-                    <p className="text-[12px] text-[#8b8b8b]">
-                        Projectnivyo © 2021 All Rights Reserved
-                    </p>
+            <Container className="flex justify-between items-center">
+                <p className="text-base text-[#757575] font-poppins">
+                    Rongtuli © {new Date().getFullYear()} All Rights Reserved
+                </p>
 
-                    <div className="flex items-center gap-2 text-[12px] font-medium text-[#3aa0e6]">
-                        <span>Pay With</span>
-
-                        <div className="flex items-center gap-2 text-[#444]">
-                            <span>VISA</span>
-                            <span>MasterCard</span>
-                            <span>AE</span>
-                            <span>PayPal</span>
-                            <span>DISCOVER</span>
-                        </div>
-                    </div>
+                <div className="flex items-center gap-2 text-xl font-medium text-orangec font-poppins">
+                    <span>Pay With</span>
+                    <Image src={paymentImg} width={574} height={34} alt="payment methods"/>
                 </div>
-            </div>
+            </Container>
         </footer>
     );
 };
