@@ -194,8 +194,7 @@ const Footer = () => {
                         </h3>
 
                         <p className="text-sm md:text-base leading-6 text-[#333333]/80">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor
+                        We are here to help you with orders, support, and style guidance anytime.
                         </p>
 
                         <div className="mt-6 md:mt-7.75 flex items-center gap-4 md:gap-6.75">
