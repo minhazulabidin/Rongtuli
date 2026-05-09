@@ -17,7 +17,7 @@ const FlashProducts = () => {
     }, [flashProducts.length])
 
     return (
-        <div className='grid grid-cols-4 gap-6.25'>
+        <div className='grid md:grid-cols-4 grid-cols-2 gap-6.25'>
             {
                 flashProducts.map(item => (
                     <Product key={item.id} item={item} />
