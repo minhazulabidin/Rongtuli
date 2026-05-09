@@ -18,9 +18,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Rangtuli | Premium Fashion & Style",
+  title: "Rongtuli | Premium Fashion & Style",
   description:
-    "Elevate your style with Rangtuli. Discover the latest in trendy apparel, premium fabrics, and high-fashion editorial collections. Shop now for a sophisticated look.",
+    "Elevate your style with Rongtuli. Discover the latest in trendy apparel, premium fabrics, and high-fashion editorial collections. Shop now for a sophisticated look.",
 };
 
 export default function RootLayout({ children }) {

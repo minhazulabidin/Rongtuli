@@ -1,8 +1,11 @@
-
+import logo from "@/assate/image/logo.png";
 import Container from '@/components/commonCompo/Container';
 import { Separator } from '@/components/ui/separator';
 import { CreditCard, Headphones } from 'lucide-react';
-import { FaStar, FaTruck } from 'react-icons/fa';
+import Image from "next/image";
+import Link from "next/link";
+import { FaFacebook, FaLinkedinIn, FaStar, FaTruck, FaTwitter } from 'react-icons/fa';
+import { FaInstagram } from "react-icons/fa6";
 import { RxCounterClockwiseClock } from 'react-icons/rx';
 
 
@@ -58,52 +61,37 @@ const Footer = () => {
                     }
                 </div>
             </Container>
+
             <Separator className="my-12.5" />
-            {/* Middle Footer */}
-            <div className="border-b border-[#d9d9d9]">
-                <div className="mx-auto grid max-w-[1200px] grid-cols-4 gap-10 px-8 py-10">
+
+            <Container className="">
+                <div className="grid grid-cols-9 gap-10 font-poppins">
                     {/* Logo & About */}
-                    <div>
-                        <div className="flex items-center gap-2">
-                            <div className="h-10 w-10 rounded-full bg-[#3aa0e6]" />
+                    <div className="col-span-3">
+                        <Image src={logo} width={100} height={100} alt="logo" className="w-24 md:w-32 object-contain" />
 
-                            <div>
-                                <h2 className="text-[15px] font-bold leading-none text-[#3aa0e6]">
-                                    project
-                                </h2>
-
-                                <h2 className="text-[15px] font-bold leading-none text-[#444]">
-                                    nivyo
-                                </h2>
-                            </div>
-                        </div>
-
-                        <p className="mt-5 max-w-[260px] text-[13px] leading-6 text-[#8b8b8b]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p className="text-lg mt-8 text-[#333333CC] leading-7">
+                            Elevate your style with Rongtuli. Discover the latest in trendy apparel, premium fabrics, and high-fashion editorial collections. Shop now for a sophisticated look.
                         </p>
 
                         <div className="mt-5 flex items-center gap-3">
-                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#3b5998] text-white">
-                                f
-                            </div>
-
-                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1da1f2] text-white">
-                                t
-                            </div>
-
-                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#0077b5] text-white">
-                                in
-                            </div>
-
-                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#e4405f] text-white">
-                                ◎
-                            </div>
+                            <Link href="#">
+                                <FaFacebook size={38} className="text-[#0198E9]"/>
+                            </Link>
+                            <Link href="#" className="rounded-full p-2 bg-[#1DA1F2]">
+                                <FaTwitter size={20} className="text-white"/>
+                            </Link>
+                            <Link href="#" className="rounded-full p-2 bg-[#0077B5]">
+                                <FaLinkedinIn size={20} className="text-white "/>
+                            </Link>
+                            <Link href="#" className="rounded-full p-2 bg-linear-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]">
+                                <FaInstagram size={20} className="text-white "/>
+                            </Link>
                         </div>
                     </div>
 
                     {/* Quick Links */}
-                    <div>
+                    <div className="col-span-2">
                         <h3 className="mb-5 text-[14px] font-semibold uppercase text-[#444]">
                             QUICK LINKS
                         </h3>
@@ -128,7 +116,7 @@ const Footer = () => {
                     </div>
 
                     {/* Customer Area */}
-                    <div>
+                    <div className="col-span-2">
                         <h3 className="mb-5 text-[14px] font-semibold uppercase text-[#444]">
                             CUSTOMER AREA
                         </h3>
@@ -153,7 +141,7 @@ const Footer = () => {
                     </div>
 
                     {/* Contact */}
-                    <div>
+                    <div className="col-span-2">
                         <h3 className="mb-5 text-[14px] font-semibold uppercase text-[#444]">
                             CONTACT
                         </h3>
@@ -178,7 +166,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
 
             {/* Bottom Footer */}
             <div>
