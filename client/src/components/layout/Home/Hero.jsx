@@ -29,7 +29,7 @@ const Hero = () => {
               }}
               className="h-full"
             >
-              {productsData.slice(0, 5).map((product) => (
+              {productsData.map((product) => (
                 <SwiperSlide key={product.id} className="w-full">
                   <div className="flex h-full justify-between items-center md:pl-15 pl-5.25 bg-gray-200/20 rounded-[10px]">
                     <div className="md:space-y-6.75 space-y-3">
