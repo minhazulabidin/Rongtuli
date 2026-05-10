@@ -41,7 +41,7 @@ const Product = ({ item }) => {
         </div>
         <h2 className="font-poppins text-base text-[#383838] md:text-lg">{item?.title}</h2>
         <div className="text-orangec flex items-center justify-between">
-          <p className="font-poppins text-sm font-medium md:text-[24px]">{item?.price} TK</p>
+          <p className="font-poppins text-sm font-medium md:text-xl">{item?.price} TK</p>
           <BsBasket size={24} />
         </div>
       </div>
