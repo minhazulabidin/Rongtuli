@@ -21,7 +21,7 @@ const Navbar = () => {
                         {categories.map((item, index) => (
                             <li
                                 key={index}
-                                className="whitespace-nowrap text-[12px] md:text-[14px] font-semibold text-gray-700 hover:text-black cursor-pointer transition-colors"
+                                className="whitespace-nowrap text-[12px] md:text-[14px] font-semibold text-gray-700 cursor-pointer transition-colors hover:text-orangec text-center after:content-[''] after:block after:w-full after:h-0.5 after:bg-orangec after:rounded-full after:scale-x-0 after:origin-center hover:after:scale-x-100 after:transition-transform duration-300"
                             >
                                 {item}
                             </li>
