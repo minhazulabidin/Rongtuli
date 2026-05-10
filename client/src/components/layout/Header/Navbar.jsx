@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { menuData } from '../../../../data/megaMenuData';

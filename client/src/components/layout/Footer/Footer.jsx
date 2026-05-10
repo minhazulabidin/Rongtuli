@@ -209,7 +209,7 @@ const Footer = () => {
                                 </p>
 
                                 <h2 className="text-2xl md:text-[30px] font-bold leading-none text-orangec mt-1.5">
-                                    099 456 789
+                                    01611374068
                                 </h2>
                             </div>
                         </div>
