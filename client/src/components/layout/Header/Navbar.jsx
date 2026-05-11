@@ -43,7 +43,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* MEGA MENU */}
             {
                 isMegaMenuOpen && (<div className="absolute left-0 top-full w-full bg-white font-poppins shadow-lg border-t z-50">
                     <div className=" mx-auto md:px-[71px] px-10 py-7.5">

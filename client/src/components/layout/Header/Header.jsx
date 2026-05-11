@@ -4,6 +4,7 @@ import logo from "@/assate/image/logo.png";
 import Image from "next/image";
 import { Heart, Search, ShoppingBasket, User } from "lucide-react";
 import Navbar from "./Navbar";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
 
         <div>
           <div className="order-1">
-            <Image src={logo} width={100} height={100} alt="logo" className="w-24 md:w-32 object-contain" />
+            <Link href="/"><Image src={logo} width={100} height={100} alt="logo" className="w-24 md:w-32 object-contain" /></Link>
           </div>
         </div>
 

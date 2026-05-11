@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 
 const FlashProducts = () => {
     const [flashProducts, setFlashProducts] = useState([])
-    console.log(flashProducts)
     useEffect(() => {
         const fetchData = async () => {
             const res = await api.get('/products/category/womens-dresses?limit=4')
