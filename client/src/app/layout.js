@@ -2,6 +2,7 @@ import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import "swiper/css";
 import "swiper/css/pagination";
+import 'swiper/css/thumbs';
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
