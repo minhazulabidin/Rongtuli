@@ -10,9 +10,6 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 
-// import './styles.css';
-
-// import required modules
 
 const ProductSlider = ({ images }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -20,7 +17,7 @@ const ProductSlider = ({ images }) => {
     if (!images || images.length === 0) return null;
 
     return (
-        <div className="w-169.5 gap-4">
+        <div className="md:w-169.5 w-full gap-4">
 
             <div className=''>
                 <Swiper
@@ -56,8 +53,8 @@ const ProductSlider = ({ images }) => {
             >
                 {
                     images.map((image, index) => (
-                        <SwiperSlide key={index}>
-                            <Image src={image} alt={`Product image ${index + 1}`} className='bg-gradient-to-b from-[#ffffff] via-[#f5f5f5] to-[#d6d6d6]' width={1000} height={1000} />
+                        <SwiperSlide key={index} className='cursor-pointer'>
+                            <Image src={image} alt={`Product image ${index + 1}`} className='bg-linear-to-b from-[#ffffff] via-[#f5f5f5] to-[#d6d6d6]' width={1000} height={1000} />
                         </SwiperSlide>
                     ))
                 }
