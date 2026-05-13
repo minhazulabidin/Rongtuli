@@ -22,7 +22,7 @@ const page = async ({ params }) => {
     const finalPrice = price - discountAmount;
 
     return (
-        <main className='mt-14'>
+        <main className='md:mt-14 mt-8'>
             <Container>
                 <div className='mb-6'>
                     <BreadcrumbCompo productName={singleProduct?.title}/>
