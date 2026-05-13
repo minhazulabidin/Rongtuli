@@ -25,7 +25,7 @@ const page = async ({ params }) => {
         <main>
             <Container>
                 <div>
-                    breadcum
+                    <Bread>
                 </div>
                 <div className='flex md:flex-row flex-col justify-between md:gap-27.25 gap-10 overflow-hidden'>
                     <div className='basis-1/2'>
