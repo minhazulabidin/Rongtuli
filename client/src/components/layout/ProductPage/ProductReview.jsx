@@ -2,11 +2,12 @@ import React from "react";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Rating from "@/components/commonCompo/Rating";
 
 
 const ProductReview = ({ reviews }) => {
     return (
-        <div className="text-[#555] font-poppins mt-7.5">
+        <div className="text-[#555] font-poppins mt-10">
             {/* Top Rating Section */}
             <div className="flex flex-col md:flex-row gap-10 border-b pb-10">
                 {/* Left */}
@@ -15,53 +16,58 @@ const ProductReview = ({ reviews }) => {
                         Customer reviews
                     </h3>
 
-                    <div className="flex items-center gap-1 mb-5">
-                        {[...Array(5)].map((_, i) => (
-                            <Star
-                                key={i}
-                                size={14}
-                                fill="#f6a623"
-                                stroke="#f6a623"
-                            />
-                        ))}
-
-                        <span className="text-sm ml-1 text-gray-500">
-                            4.6 out of 5
+                    <div className="flex items-center gap-2 mb-5">
+                        {
+                            reviews?.length > 0 ? <Rating rating={reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length} /> : <Rating rating={0} />
+                        }
+                        <span className="text-sm text-gray-500">
+                            {
+                                reviews?.length > 0 ? (reviews.reduce((acc, review) => acc + review.rating, 0) / reviews.length).toFixed(1) : "0.0"
+                            } out of 5
                         </span>
                     </div>
                 </div>
 
                 {/* Progress */}
-                <div className="space-y-2 w-[250px]">
-                    {[
-                        { label: "5 Stars", value: "79%" },
-                        { label: "4 Stars", value: "12%" },
-                        { label: "3 Stars", value: "4%" },
-                        { label: "2 Stars", value: "2%" },
-                        { label: "1 Stars", value: "4%" },
-                    ].map((item, index) => (
-                        <div
-                            key={index}
-                            className="flex items-center gap-3 text-xs"
-                        >
-                            <span className="w-[50px] text-gray-500">
-                                {item.label}
-                            </span>
+                <div className="space-y-2 w-[350px]">
+                    {
+                        [5, 4, 3, 2, 1].map((star) => {
 
-                            <div className="w-full bg-gray-200 h-[4px] rounded">
+                            const totalReviews = reviews?.length || 0;
+
+                            const starCount = reviews?.filter(
+                                (review) => Math.round(review.rating) === star
+                            ).length;
+
+                            const percentage = totalReviews
+                                ? ((starCount / totalReviews) * 100).toFixed(0)
+                                : 0;
+
+                            return (
                                 <div
-                                    className="bg-[#f6a623] h-[4px] rounded"
-                                    style={{
-                                        width: item.value,
-                                    }}
-                                />
-                            </div>
+                                    key={star}
+                                    className="flex items-center gap-3 text-xs"
+                                >
+                                    <span className="text-gray-500 w-[80px]">
+                                        {star} Stars
+                                    </span>
 
-                            <span className="text-gray-500">
-                                {item.value}
-                            </span>
-                        </div>
-                    ))}
+                                    <div className="w-full bg-gray-200 h-[4px] rounded">
+                                        <div
+                                            className="bg-[#f6a623] h-[4px] rounded"
+                                            style={{
+                                                width: `${percentage}%`,
+                                            }}
+                                        />
+                                    </div>
+
+                                    <span className="text-gray-500">
+                                        {percentage}%
+                                    </span>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
                 <div>
                     <button className="bg-orangec text-white text-xs px-12 py-2.5 rounded transition cursor-pointer hover:bg-orangec/90">
@@ -73,7 +79,7 @@ const ProductReview = ({ reviews }) => {
             {/* Reviews */}
             <div className="py-10">
                 <h2 className="text-[28px] font-semibold mb-8">
-                    Reviews (4)
+                    {reviews.length} Reviews
                 </h2>
 
                 <div className="space-y-10">
@@ -93,29 +99,26 @@ const ProductReview = ({ reviews }) => {
                                 <div>
                                     <div className="flex items-center gap-3">
                                         <h4 className="font-medium text-[15px]">
-                                            {review.name}
+                                            {review?.reviewerName}
                                         </h4>
 
                                         <div className="flex items-center gap-1">
-                                            {[...Array(5)].map((_, i) => (
-                                                <Star
-                                                    key={i}
-                                                    size={13}
-                                                    fill="#f6a623"
-                                                    stroke="#f6a623"
-                                                />
-                                            ))}
+                                            <Rating rating={review?.rating} />
                                         </div>
 
                                         <span className="text-xs text-gray-400">
-                                            1 Month Ago
+                                            {
+                                                new Date(review?.date).toLocaleDateString("en-US", {
+                                                    day: "numeric",
+                                                    month: "short",
+                                                    year: "numeric",
+                                                })
+                                            }
                                         </span>
                                     </div>
 
                                     <p className="text-sm text-gray-500 leading-7 mt-3 max-w-3xl">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua.
+                                        {review?.comment}
                                     </p>
                                 </div>
                             </div>
