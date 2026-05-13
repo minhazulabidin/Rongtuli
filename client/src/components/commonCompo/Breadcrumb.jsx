@@ -24,11 +24,12 @@ export function BreadcrumbCompo({ productName }) {
                 <BreadcrumbItem>
                     <BreadcrumbLink render={<Link className="hover:text-orangec" href={`/${param.category}`}>{param.category}</Link>} />
                 </BreadcrumbItem>
-                <BreadcrumbSeparator />
+
                 {
-                    productName && <BreadcrumbItem>
-                        <BreadcrumbPage className="text-orangec">{productName}</BreadcrumbPage>
-                    </BreadcrumbItem>
+                    productName && <><BreadcrumbSeparator />
+                        <BreadcrumbItem>
+                            <BreadcrumbPage className="text-orangec">{productName}</BreadcrumbPage>
+                        </BreadcrumbItem></>
                 }
 
             </BreadcrumbList>

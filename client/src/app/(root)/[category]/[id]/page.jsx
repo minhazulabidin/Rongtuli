@@ -2,14 +2,16 @@
 import { BreadcrumbCompo } from '@/components/commonCompo/Breadcrumb';
 import Container from '@/components/commonCompo/Container';
 import ProductSlider from '@/components/commonCompo/ProductSlider';
+import Rating from '@/components/commonCompo/Rating';
 import { Separator } from '@/components/ui/separator';
 import api from '@/lib/api';
 import { FaCheck, FaHeart } from 'react-icons/fa';
 import { FaCircleXmark } from 'react-icons/fa6';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
+
 const page = async ({ params }) => {
-    const { id, category } = await params;
+    const { id } = await params;
     const res = await api.get(`/products/${id}`);
     const singleProduct = await res?.data;
 
@@ -25,7 +27,7 @@ const page = async ({ params }) => {
         <main className='md:mt-14 mt-8'>
             <Container>
                 <div className='mb-6'>
-                    <BreadcrumbCompo productName={singleProduct?.title}/>
+                    <BreadcrumbCompo productName={singleProduct?.title} />
                 </div>
                 <div className='flex md:flex-row flex-col justify-between md:gap-27.25 gap-10 overflow-hidden'>
                     <div className='basis-1/2'>
@@ -34,8 +36,16 @@ const page = async ({ params }) => {
                     <div className='basis-1/2 flex flex-col'>
                         <h2 className='font-poppins font-medium md:text-[55px] text-4xl text-[#333333]'>{singleProduct?.title}</h2>
                         <div className='flex justify-between items-center md:gap-3.75 mt-5.75 font-poppins'>
-                            <div className="font-poppins flex items-center gap-1.25 md:text-xl text-xm">
-                                <span>({singleProduct?.rating}) <span className='text-[#BABABA] text-sm'>({singleProduct?.reviews.length})</span></span>
+                            <div className="flex items-center gap-2">
+
+                                <span className='text-sm md:block hidden'>({singleProduct?.rating})</span>
+
+                                <Rating rating={singleProduct?.rating} />
+
+                                <span className='text-[#BABABA] text-sm md:block hidden'>
+                                    ({singleProduct?.reviews?.length})
+                                </span>
+
                             </div>
                             <Separator orientation="vertical" />
                             <p className='flex items-center md:text-lg md:gap-3 gap-1 font-semibold tracking-wider'><FaCheck className='text-green-300! ' />{singleProduct?.minimumOrderQuantity * 12} Sold</p>
