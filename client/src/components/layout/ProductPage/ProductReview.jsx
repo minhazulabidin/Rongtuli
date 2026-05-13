@@ -98,7 +98,7 @@ const ProductReview = ({ reviews }) => {
                                 }
                                 <div>
                                     <div className="flex items-center gap-3">
-                                        <h4 className="font-medium text-[15px]">
+                                        <h4 className="font-medium md:text-lg text-sm">
                                             {review?.reviewerName}
                                         </h4>
 
@@ -106,7 +106,7 @@ const ProductReview = ({ reviews }) => {
                                             <Rating rating={review?.rating} />
                                         </div>
 
-                                        <span className="text-xs text-gray-400">
+                                        <span className="md:text-xs text-[10px] text-gray-400">
                                             {
                                                 new Date(review?.date).toLocaleDateString("en-US", {
                                                     day: "numeric",
@@ -117,7 +117,7 @@ const ProductReview = ({ reviews }) => {
                                         </span>
                                     </div>
 
-                                    <p className="text-sm text-gray-500 leading-7 mt-3 max-w-3xl">
+                                    <p className="md:text-base text-sm text-gray-500 leading-7 mt-3 max-w-3xl">
                                         {review?.comment}
                                     </p>
                                 </div>
