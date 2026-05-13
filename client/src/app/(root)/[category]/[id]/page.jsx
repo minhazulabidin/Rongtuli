@@ -1,4 +1,5 @@
 
+import { BreadcrumbCompo } from '@/components/commonCompo/Breadcrumb';
 import Container from '@/components/commonCompo/Container';
 import ProductSlider from '@/components/commonCompo/ProductSlider';
 import { Separator } from '@/components/ui/separator';
@@ -12,7 +13,6 @@ const page = async ({ params }) => {
     const res = await api.get(`/products/${id}`);
     const singleProduct = await res?.data;
 
-    console.log(category)
     const price = singleProduct?.price * 12;
 
     const discount = singleProduct?.discountPercentage;
@@ -22,10 +22,10 @@ const page = async ({ params }) => {
     const finalPrice = price - discountAmount;
 
     return (
-        <main>
+        <main className='mt-14'>
             <Container>
-                <div>
-                    <Bread>
+                <div className='mb-6'>
+                    <BreadcrumbCompo productName={singleProduct?.title}/>
                 </div>
                 <div className='flex md:flex-row flex-col justify-between md:gap-27.25 gap-10 overflow-hidden'>
                     <div className='basis-1/2'>
@@ -66,7 +66,7 @@ const page = async ({ params }) => {
                                 )
                             }
                         </div>
-                        <Separator className="mt-4.5"/>
+                        <Separator className="mt-4.5" />
                         <div className='mt-3.5'>
                             <p className='font-poppins md:text-xl text-base tracking-wide'>{singleProduct?.description}</p>
                             <p>Size: </p>

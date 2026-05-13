@@ -13,7 +13,6 @@ import 'swiper/css/thumbs';
 
 const ProductSlider = ({ images }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    console.log(images)
     if (!images || images.length === 0) return null;
 
     return (
