@@ -3,6 +3,7 @@ import { BreadcrumbCompo } from '@/components/commonCompo/Breadcrumb';
 import Container from '@/components/commonCompo/Container';
 import ProductSlider from '@/components/commonCompo/ProductSlider';
 import Rating from '@/components/commonCompo/Rating';
+import ProductReview from '@/components/layout/ProductPage/ProductReview';
 import { Separator } from '@/components/ui/separator';
 import api from '@/lib/api';
 import { FaCheck, FaHeart } from 'react-icons/fa';
@@ -83,6 +84,7 @@ const page = async ({ params }) => {
                         </div>
                     </div>
                 </div>
+                <ProductReview reviews={singleProduct?.reviews}/>
             </Container>
         </main>
     )
