@@ -29,7 +29,7 @@ const ProductReview = ({ reviews }) => {
                 </div>
 
                 {/* Progress */}
-                <div className="space-y-2 w-[350px]">
+                <div className="space-y-2 w-87.5">
                     {
                         [5, 4, 3, 2, 1].map((star) => {
 
@@ -48,13 +48,13 @@ const ProductReview = ({ reviews }) => {
                                     key={star}
                                     className="flex items-center gap-3 text-xs"
                                 >
-                                    <span className="text-gray-500 w-[80px]">
+                                    <span className="text-gray-500 w-20">
                                         {star} Stars
                                     </span>
 
-                                    <div className="w-full bg-gray-200 h-[4px] rounded">
+                                    <div className="w-full bg-gray-200 h-1 rounded">
                                         <div
-                                            className="bg-[#f6a623] h-[4px] rounded"
+                                            className="bg-[#f6a623] h-1 rounded"
                                             style={{
                                                 width: `${percentage}%`,
                                             }}
@@ -146,7 +146,7 @@ const ProductReview = ({ reviews }) => {
 
                         <input
                             type="text"
-                            className="w-full border border-gray-300 h-[50px] px-4 outline-none focus:border-[#1496db]"
+                            className="w-full border border-gray-300 h-12.5 px-4 outline-none focus:border-[#1496db]"
                         />
                     </div>
 
@@ -157,7 +157,7 @@ const ProductReview = ({ reviews }) => {
 
                         <input
                             type="email"
-                            className="w-full border border-gray-300 h-[50px] px-4 outline-none focus:border-[#1496db]"
+                            className="w-full border border-gray-300 h-12.5 px-4 outline-none focus:border-[#1496db]"
                         />
                     </div>
 
