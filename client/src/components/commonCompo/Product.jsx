@@ -43,13 +43,13 @@ const Product = ({ item }) => {
         </div>
 
         <Link href={`/${item?.category}/${item?.id}`}>
-          <h2 className="font-poppins cursor-pointer md:text-base text-xm text-[#383838] hover:text-orange-500 md:text-lg duration-300 mb-2.5">
+          <h2 className="font-poppins cursor-pointer text-xm text-[#383838] hover:text-orange-500 md:text-lg duration-300 mb-2.5">
             {item?.title}
           </h2>
         </Link>
 
         <div className="text-orangec flex items-center justify-between">
-          <p className="font-poppins md:text-sm text-xm font-medium md:text-xl">
+          <p className="font-poppins md:text-sm text-xm font-medium">
             {item?.price} TK
           </p>
 
