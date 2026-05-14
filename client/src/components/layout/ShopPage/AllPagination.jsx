@@ -4,6 +4,7 @@ import ReactPaginate from 'react-paginate';
 import { useParams } from 'next/navigation'
 import api from '@/lib/api';
 import Product from '@/components/commonCompo/Product';
+import { LiaAngleRightSolid, LiaAngleLeftSolid } from 'react-icons/lia';
 
 
 function Items({ currentItems }) {
@@ -28,6 +29,10 @@ function AllPagination({ itemsPerPage }) {
 
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % products.length;
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
         setItemOffset(newOffset);
     };
 
@@ -42,20 +47,23 @@ function AllPagination({ itemsPerPage }) {
     }, [products])
 
     return (
-        <>
+        <div>
             <Items currentItems={currentItems} />
             <ReactPaginate
                 breakLabel="..."
-                nextLabel="next >"
+                nextLabel="Next >"
+                previousLabel=" < Previous"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={5}
                 pageCount={pageCount}
-                previousLabel="< previous"
                 renderOnZeroPageCount={null}
-                className='flex'
-                pageClassName=""
+                containerClassName="flex gap-6.25 mt-10 justify-end font-poppins"
+                pageLinkClassName="px-6.5 py-4 text-orangec hover:bg-orangec hover:text-white cursor-pointer duration-200 rounded-md border border-gray-200"
+                previousLinkClassName="px-6.5 py-4 bg-white text-orangec hover:bg-orangec hover:text-white cursor-pointer duration-200 rounded-md border border-gray-200"
+                nextLinkClassName="px-6.5 py-4 bg-white text-orangec hover:bg-orangec hover:text-white cursor-pointer duration-200 rounded-md border border-gray-200"
+                activeLinkClassName='bg-orangec text-white'
             />
-        </>
+        </div>
     );
 }
 
