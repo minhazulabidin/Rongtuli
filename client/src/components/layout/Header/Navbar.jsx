@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { menuData } from '../../../../data/megaMenuData';
+import Link from 'next/link';
 
 const Navbar = () => {
- 
+
     const [activeMenu, setActiveMenu] = useState("WOMEN'S FASHION");
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
 
@@ -45,8 +46,8 @@ const Navbar = () => {
 
             {
                 isMegaMenuOpen && (<div className="absolute left-0 top-full w-full bg-white font-poppins shadow-lg border-t z-50">
-                    <div className=" mx-auto md:px-[71px] px-10 py-7.5">
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 md:gap-[150px] gap-10">
+                    <div className=" mx-auto md:px-17.75 px-10 py-7.5">
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 md:gap-37.5 gap-10">
                             {Object.entries(menuData[activeMenu]).map(
                                 ([title, items], index) => (
                                     <div key={index}>
@@ -55,12 +56,13 @@ const Navbar = () => {
                                         </h3>
                                         <ul className="space-y-2">
                                             {items.map((subItem, i) => (
-                                                <li
+                                                <Link
                                                     key={i}
-                                                    className="md:text-sm text-xs text-[#757575] hover:text-orangec cursor-pointer duration-300"
+                                                    href={`/${subItem.slug}`}
+                                                    className="block md:text-sm text-xs text-[#757575] hover:text-orangec cursor-pointer duration-300"
                                                 >
-                                                    {subItem}
-                                                </li>
+                                                    {subItem.name}
+                                                </Link>
                                             ))}
                                         </ul>
                                     </div>

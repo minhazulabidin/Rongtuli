@@ -1,151 +1,158 @@
-  export const menuData = {
-        "WOMEN'S FASHION": {
-            Saree: [
-                'Cotton',
-                'Silk',
-                'Jamdani',
-                'Muslin',
-                'Katan',
-                'Linen',
-            ],
-            Clothes: [
-                'T-shirt',
-                'Shirt',
-                'Jeans',
-                'Tracksuit',
-                'Sweater',
-                'Suit',
-            ],
-            Cosmetic: [
-                'Perfume',
-                'Skin care',
-                'Hair care',
-                'Make-up',
-                'Lipstick',
-                'Sun cream',
-            ],
-            Shoes: [
-                'Heeled shoes',
-                'Sneakers',
-                'Sandals',
-                'Slipper',
-            ],
-        },
+export const menuData = {
+    "WOMEN'S FASHION": {
+        Dresses: [
+            {
+                slug: 'womens-dresses',
+                name: 'Womens Dresses',
+            },
+            {
+                slug: 'tops',
+                name: 'Tops',
+            },
+        ],
 
-        "MEN'S FASHION": {
-            Clothing: [
-                'T-shirt',
-                'Shirt',
-                'Panjabi',
-                'Jeans',
-                'Blazer',
-                'Hoodie',
-            ],
-            Footwear: [
-                'Sneakers',
-                'Formal Shoes',
-                'Boots',
-                'Sandals',
-            ],
-            Accessories: [
-                'Watch',
-                'Wallet',
-                'Belt',
-                'Cap',
-            ],
-        },
+        Shoes: [
+            {
+                slug: 'womens-shoes',
+                name: 'Womens Shoes',
+            },
+        ],
 
-        "KID'S FASHION": {
-            Boys: [
-                'T-shirt',
-                'Jeans',
-                'School Dress',
-                'Shoes',
-            ],
-            Girls: [
-                'Frock',
-                'Tops',
-                'Hair Band',
-                'Sandals',
-            ],
-            Baby: [
-                'Feeder',
-                'Toys',
-                'Baby Dress',
-                'Diapers',
-            ],
-        },
+        Accessories: [
+            {
+                slug: 'womens-bags',
+                name: 'Womens Bags',
+            },
+            {
+                slug: 'womens-jewellery',
+                name: 'Womens Jewellery',
+            },
+            {
+                slug: 'womens-watches',
+                name: 'Womens Watches',
+            },
+            {
+                slug: 'sunglasses',
+                name: 'Sunglasses',
+            },
+        ],
 
-        'HOME & LIFESTYLE': {
-            Furniture: [
-                'Chair',
-                'Table',
-                'Sofa',
-                'Bed',
-            ],
-            Kitchen: [
-                'Cookware',
-                'Plate',
-                'Bottle',
-                'Blender',
-            ],
-            Decor: [
-                'Wall Art',
-                'Lamp',
-                'Clock',
-                'Flower Vase',
-            ],
-        },
+        Beauty: [
+            {
+                slug: 'beauty',
+                name: 'Beauty',
+            },
+            {
+                slug: 'skin-care',
+                name: 'Skin Care',
+            },
+            {
+                slug: 'fragrances',
+                name: 'Fragrances',
+            },
+        ],
+    },
 
-        'ARTS & CRAFTS': {
-            Drawing: [
-                'Color Pencil',
-                'Water Color',
-                'Canvas',
-                'Brush',
-            ],
-            Handmade: [
-                'Clay Art',
-                'Paper Craft',
-                'Wood Craft',
-            ],
-        },
+    "MEN'S FASHION": {
+        Clothing: [
+            {
+                slug: 'mens-shirts',
+                name: 'Mens Shirts',
+            },
+        ],
 
-        'COMPUTER & ELECTRONICS': {
-            Computer: [
-                'Laptop',
-                'Monitor',
-                'Keyboard',
-                'Mouse',
-            ],
-            Mobile: [
-                'Smartphone',
-                'Charger',
-                'Power Bank',
-            ],
-            Gadgets: [
-                'Headphone',
-                'Smart Watch',
-                'Speaker',
-            ],
-        },
+        Footwear: [
+            {
+                slug: 'mens-shoes',
+                name: 'Mens Shoes',
+            },
+        ],
 
-        'FOOD & GROCERY': {
-            Grocery: [
-                'Rice',
-                'Oil',
-                'Salt',
-                'Sugar',
-            ],
-            Snacks: [
-                'Chips',
-                'Biscuits',
-                'Chocolate',
-            ],
-            Beverage: [
-                'Tea',
-                'Coffee',
-                'Juice',
-            ],
-        },
-    };
+        Accessories: [
+            {
+                slug: 'mens-watches',
+                name: 'Mens Watches',
+            },
+            {
+                slug: 'sunglasses',
+                name: 'Sunglasses',
+            },
+        ],
+    },
+
+    "HOME & LIFESTYLE": {
+        Furniture: [
+            {
+                slug: 'furniture',
+                name: 'Furniture',
+            },
+        ],
+
+        Home: [
+            {
+                slug: 'home-decoration',
+                name: 'Home Decoration',
+            },
+        ],
+
+        Kitchen: [
+            {
+                slug: 'kitchen-accessories',
+                name: 'Kitchen Accessories',
+            },
+        ],
+    },
+
+    "COMPUTER & ELECTRONICS": {
+        Computer: [
+            {
+                slug: 'laptops',
+                name: 'Laptops',
+            },
+            {
+                slug: 'tablets',
+                name: 'Tablets',
+            },
+        ],
+
+        Mobile: [
+            {
+                slug: 'smartphones',
+                name: 'Smartphones',
+            },
+            {
+                slug: 'mobile-accessories',
+                name: 'Mobile Accessories',
+            },
+        ],
+    },
+
+    "SPORTS & OUTDOOR": {
+        Sports: [
+            {
+                slug: 'sports-accessories',
+                name: 'Sports Accessories',
+            },
+        ],
+
+        Vehicle: [
+            {
+                slug: 'motorcycle',
+                name: 'Motorcycle',
+            },
+            {
+                slug: 'vehicle',
+                name: 'Vehicle',
+            },
+        ],
+    },
+
+    "FOOD & GROCERY": {
+        Grocery: [
+            {
+                slug: 'groceries',
+                name: 'Groceries',
+            },
+        ],
+    },
+};

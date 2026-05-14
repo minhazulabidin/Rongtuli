@@ -38,13 +38,23 @@ function AllPagination({ itemsPerPage }) {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const res = await api.get(`/products/category/${category}`)
-            setProducts(res?.data?.products)
-        }
-        if (products.length === 0) {
-            fetchProducts()
-        }
-    }, [products])
+            try {
+                let res;
+
+                if (category === "products") {
+                    res = await api.get('/products?limit=194');
+                    setProducts(res?.data?.products);
+                } else {
+                    res = await api.get(`/products/category/${category}`);
+                    setProducts(res?.data?.products);
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        fetchProducts();
+    }, [category]);
 
     return (
         <div>
