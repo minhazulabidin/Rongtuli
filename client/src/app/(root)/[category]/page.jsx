@@ -1,9 +1,12 @@
 import Container from '@/components/commonCompo/Container'
 import AllPagination from '@/components/layout/ShopPage/AllPagination'
+import SortAndShow from '@/components/layout/ShopPage/SortAndShow';
+  
 
 import React from 'react'
 
 const page = () => {
+
 
   return (
     <main>
@@ -12,25 +15,7 @@ const page = () => {
 
         </aside>
         <section className='flex-1 mt-16.25'>
-          <div className="flex items-center justify-between text-sm text-gray-600 mb-5.5!">
-            {/* Left side */}
-            <p className='text-lg font-poppins text-[#42424180] font-medium'>
-              Showing <span className=" text-gray-900/80">20</span> of{" "}
-              <span className=" text-gray-900/80">160</span> products
-            </p>
-
-            {/* Right side */}
-            <div className="flex items-center gap-2 font-poppins">
-              <span>Sort by:</span>
-
-              <select className="border border-gray-300 rounded-md px-2 py-1 text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400">
-                <option>Newest Items</option>
-                <option>Oldest Items</option>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-              </select>
-            </div>
-          </div>
+          <SortAndShow/>
           <div className='w-full'>
             <AllPagination itemsPerPage={12} />
           </div>
