@@ -1,7 +1,10 @@
 import Container from '@/components/commonCompo/Container'
+import AllPagination from '@/components/layout/ShopPage/AllPagination'
+
 import React from 'react'
 
 const page = () => {
+
   return (
     <main>
       <Container className="flex justify-between gap-13.25">
@@ -12,8 +15,8 @@ const page = () => {
           <div>
             sort and show product
           </div>
-          <div>
-            
+          <div className='w-full'>
+            <AllPagination itemsPerPage={12} />
           </div>
         </section>
       </Container>
