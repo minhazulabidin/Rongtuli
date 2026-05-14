@@ -26,148 +26,123 @@ import WomenShoeIcon from './icons/WomenShoeIcon.png'
 
 export const categoriesData = [
     {
-        "slug": "beauty",
-        "name": "Beauty",
-        "url": "https://dummyjson.com/products/category/beauty",
-        "icon": BeautyIcon
+        slug: "beauty",
+        name: "Beauty",
+        icon: BeautyIcon
     },
     {
-        "slug": "fragrances",
-        "name": "Fragrances",
-        "url": "https://dummyjson.com/products/category/fragrances",
-        "icon": FragrancesIcon
+        slug: "fragrances",
+        name: "Fragrances",
+        icon: FragrancesIcon
     },
     {
-        "slug": "furniture",
-        "name": "Furniture",
-        "url": "https://dummyjson.com/products/category/furniture",
-        "icon": FurnitureIcon
+        slug: "furniture",
+        name: "Furniture",
+        icon: FurnitureIcon
     },
     {
-        "slug": "groceries",
-        "name": "Groceries",
-        "url": "https://dummyjson.com/products/category/groceries",
-        "icon": GroceryIcon
+        slug: "groceries",
+        name: "Groceries",
+        icon: GroceryIcon
     },
     {
-        "slug": "home-decoration",
-        "name": "Home Decoration",
-        "url": "https://dummyjson.com/products/category/home-decoration",
-        "icon": HomeDecorationIcon
+        slug: "home-decoration",
+        name: "Home Decoration",
+        icon: HomeDecorationIcon
     },
     {
-        "slug": "kitchen-accessories",
-        "name": "Kitchen Accessories",
-        "url": "https://dummyjson.com/products/category/kitchen-accessories",
-        "icon": KitchenAccessoriesIcon
-
+        slug: "kitchen-accessories",
+        name: "Kitchen Accessories",
+        icon: KitchenAccessoriesIcon
     },
     {
-        "slug": "laptops",
-        "name": "Laptops",
-        "url": "https://dummyjson.com/products/category/laptops",
-        "icon": LaptopIcon
+        slug: "laptops",
+        name: "Laptops",
+        icon: LaptopIcon
     },
     {
-        "slug": "mens-shirts",
-        "name": "Mens Shirts",
-        "url": "https://dummyjson.com/products/category/mens-shirts",
-        "icon": MenShirtIcon
+        slug: "mens-shirts",
+        name: "Mens Shirts",
+        icon: MenShirtIcon
     },
     {
-        "slug": "mens-shoes",
-        "name": "Mens Shoes",
-        "url": "https://dummyjson.com/products/category/mens-shoes",
-        "icon": MenShoeIcon
+        slug: "mens-shoes",
+        name: "Mens Shoes",
+        icon: MenShoeIcon
     },
     {
-        "slug": "mens-watches",
-        "name": "Mens Watches",
-        "url": "https://dummyjson.com/products/category/mens-watches",
-        "icon": MenWatchIcon
+        slug: "mens-watches",
+        name: "Mens Watches",
+        icon: MenWatchIcon
     },
     {
-        "slug": "mobile-accessories",
-        "name": "Mobile Accessories",
-        "url": "https://dummyjson.com/products/category/mobile-accessories",
-        "icon": MobileAccessoriesIcon
+        slug: "mobile-accessories",
+        name: "Mobile Accessories",
+        icon: MobileAccessoriesIcon
     },
     {
-        "slug": "motorcycle",
-        "name": "Motorcycle",
-        "url": "https://dummyjson.com/products/category/motorcycle",
-        "icon": MotorcycleIcon
+        slug: "motorcycle",
+        name: "Motorcycle",
+        icon: MotorcycleIcon
     },
     {
-        "slug": "skin-care",
-        "name": "Skin Care",
-        "url": "https://dummyjson.com/products/category/skin-care",
-        "icon":SkinCareIcon
+        slug: "skin-care",
+        name: "Skin Care",
+        icon: SkinCareIcon
     },
     {
-        "slug": "smartphones",
-        "name": "Smartphones",
-        "url": "https://dummyjson.com/products/category/smartphones",
-        "icon": SmartphoneIcon
+        slug: "smartphones",
+        name: "Smartphones",
+        icon: SmartphoneIcon
     },
     {
-        "slug": "sports-accessories",
-        "name": "Sports Accessories",
-        "url": "https://dummyjson.com/products/category/sports-accessories",
-        "icon":SportsIcon
+        slug: "sports-accessories",
+        name: "Sports Accessories",
+        icon: SportsIcon
     },
     {
-        "slug": "sunglasses",
-        "name": "Sunglasses",
-        "url": "https://dummyjson.com/products/category/sunglasses",
-        "icon":SunglassesIcon
+        slug: "sunglasses",
+        name: "Sunglasses",
+        icon: SunglassesIcon
     },
     {
-        "slug": "tablets",
-        "name": "Tablets",
-        "url": "https://dummyjson.com/products/category/tablets",
-        "icon": TabletsIcon
+        slug: "tablets",
+        name: "Tablets",
+        icon: TabletsIcon
     },
     {
-        "slug": "tops",
-        "name": "Tops",
-        "url": "https://dummyjson.com/products/category/tops",
-        "icon": TopsIcon
+        slug: "tops",
+        name: "Tops",
+        icon: TopsIcon
     },
     {
-        "slug": "vehicle",
-        "name": "Vehicle",
-        "url": "https://dummyjson.com/products/category/vehicle",
-        "icon": VehicleIcon
+        slug: "vehicle",
+        name: "Vehicle",
+        icon: VehicleIcon
     },
     {
-        "slug": "womens-bags",
-        "name": "Womens Bags",
-        "url": "https://dummyjson.com/products/category/womens-bags",
-        "icon": WomenBagsIcon
+        slug: "womens-bags",
+        name: "Womens Bags",
+        icon: WomenBagsIcon
     },
     {
-        "slug": "womens-dresses",
-        "name": "Womens Dresses",
-        "url": "https://dummyjson.com/products/category/womens-dresses",
-        "icon": WomenDressesIcon
+        slug: "womens-dresses",
+        name: "Womens Dresses",
+        icon: WomenDressesIcon
     },
     {
-        "slug": "womens-jewellery",
-        "name": "Womens Jewellery",
-        "url": "https://dummyjson.com/products/category/womens-jewellery",
-        "icon": WomenJewellerIcon
+        slug: "womens-jewellery",
+        name: "Womens Jewellery",
+        icon: WomenJewellerIcon
     },
     {
-        "slug": "womens-shoes",
-        "name": "Womens Shoes",
-        "url": "https://dummyjson.com/products/category/womens-shoes",
-        "icon": WomenShoeIcon
+        slug: "womens-shoes",
+        name: "Womens Shoes",
+        icon: WomenShoeIcon
     },
     {
-        "slug": "womens-watches",
-        "name": "Womens Watches",
-        "url": "https://dummyjson.com/products/category/womens-watches",
-        "icon": WomenWatchIcon
+        slug: "womens-watches",
+        name: "Womens Watches",
+        icon: WomenWatchIcon
     }
-]
+];

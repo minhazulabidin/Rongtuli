@@ -83,8 +83,8 @@ const ProductReview = ({ reviews }) => {
                 </h2>
 
                 <div className="space-y-10">
-                    {reviews.map((review) => (
-                        <div key={review.id}>
+                    {reviews.map((review, idx) => (
+                        <div key={idx}>
                             <div className="flex items-start gap-4">
                                 {
                                     review.image ? <><Image src={review.image} alt={review.name} width={50} height={50} /></> : <> <Avatar>
