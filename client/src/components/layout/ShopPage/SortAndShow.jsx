@@ -5,7 +5,7 @@ import { useProductStore } from '@/ZustandStore/ShowProductNum';
 const SortAndShow = () => {
 
     return (
-        <div className="flex items-center justify-between text-sm text-gray-600 mb-5.5!">
+        <div className="hidden items-center justify-between text-sm text-gray-600 mb-5.5! md:flex">
             {/* Left side */}
             <p className='text-lg font-poppins text-[#42424180] font-medium'>
                 Showing <span className=" text-gray-900/80">12</span> of{" "}

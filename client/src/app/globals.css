@@ -4,6 +4,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+*{
+  scroll-behavior: smooth;
+}
 @theme inline {
   --color-orangec: var(--orangec);
   --color-mint: var(--mint);

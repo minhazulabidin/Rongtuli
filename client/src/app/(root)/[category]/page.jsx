@@ -11,11 +11,11 @@ const page = () => {
 
   return (
     <main>
-      <Container className="flex justify-between gap-13.25">
-        <aside className='w-75'>
+      <Container className="flex justify-between md:gap-13.25 gap-0">
+        <aside className='md:w-75 w-0'>
           <ShopSidebar />
         </aside>
-        <section className='flex-1 mt-16.25'>
+        <section className='flex-1 md:mt-16.25 mt-5'>
           <SortAndShow/>
           <div className='w-full'>
             <AllPagination itemsPerPage={12} />

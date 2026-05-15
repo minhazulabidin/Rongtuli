@@ -22,7 +22,7 @@ const ShopSidebar = () => {
     const [selectedRating, setSelectedRating] = useState(0);
 
     return (
-        <section className="mt-10.75 font-poppins">
+        <section className="mt-10.75 font-poppins md:block hidden">
 
             {/* Categories */}
             <Accordion>
