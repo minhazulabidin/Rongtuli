@@ -32,7 +32,7 @@ const Hero = () => {
               {productsData.map((product) => (
                 <SwiperSlide key={product.id} className="w-full">
                   <div className="flex h-full justify-between items-center md:pl-15 pl-5.25 bg-gray-200/20 rounded-[10px]">
-                    <div className="md:space-y-6.75 space-y-3">
+                    <div className="md:space-y-6.75 space-y-3 text-left">
                       <h2 className="font-montserrat font-bold md:text-[45px] text-xl text-orangec">
                         {product.productName}
                       </h2>

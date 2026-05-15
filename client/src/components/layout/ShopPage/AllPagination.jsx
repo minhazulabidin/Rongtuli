@@ -64,10 +64,11 @@ function AllPagination({ itemsPerPage }) {
                 nextLabel="Next >"
                 previousLabel=" < Previous"
                 onPageChange={handlePageClick}
-                pageRangeDisplayed={5}
+                pageRangeDisplayed={2}
                 pageCount={pageCount}
                 renderOnZeroPageCount={null}
-                containerClassName="flex md:gap-6.25 gap-2.5 mt-10 justify-end font-poppins"
+                marginPagesDisplayed={2}
+                containerClassName="flex md:gap-6.25 gap-2.5 mt-10 justify-end font-poppins font-medium text-sm md:text-base text-[#757575]"
                 pageLinkClassName="md:px-6.5 px-4.5 md:py-4 py-2 text-orangec hover:bg-orangec hover:text-white cursor-pointer duration-200 rounded-md border border-gray-200"
                 previousLinkClassName="md:px-6.5 px-4.5 md:py-4 py-2 bg-white text-orangec hover:bg-orangec hover:text-white cursor-pointer duration-200 rounded-md border border-gray-200"
                 nextLinkClassName="md:px-6.5 px-4.5 md:py-4 py-2 bg-white text-orangec hover:bg-orangec hover:text-white cursor-pointer duration-200 rounded-md border border-gray-200"

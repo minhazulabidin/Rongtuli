@@ -16,7 +16,7 @@ const SortAndShow = () => {
             <div className="flex items-center gap-2 font-poppins">
                 <span>Sort by:</span>
 
-                <select className="border border-gray-300 rounded-md px-2 py-1 text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400">
+                <select className="border border-gray-300 rounded-md  text-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-400 px-3.75 py-1.25">
                     <option>Newest Items</option>
                     <option>Oldest Items</option>
                     <option>Price: Low to High</option>
