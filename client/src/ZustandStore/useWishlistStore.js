@@ -9,22 +9,22 @@ const useWishlistStore = create(
       wishlist: [],
 
       // Add / Remove Toggle
-      toggleWishlist: (product) => {
+      toggleWishlist: (productId) => {
         const { wishlist } = get();
 
         const exists = wishlist.find(
-          (item) => item.id === product.id
+          (itemId) => itemId === productId
         );
 
         if (exists) {
           set({
             wishlist: wishlist.filter(
-              (item) => item.id !== product.id
+              (itemId) => itemId !== productId
             ),
           });
         } else {
           set({
-            wishlist: [...wishlist, product],
+            wishlist: [...wishlist, productId],
           });
         }
       },
@@ -32,7 +32,7 @@ const useWishlistStore = create(
       // Check Exists
       isInWishlist: (id) => {
         return get().wishlist.some(
-          (item) => item.id === id
+          (itemId) => itemId === id
         );
       },
 
@@ -40,7 +40,7 @@ const useWishlistStore = create(
       removeWishlist: (id) => {
         set({
           wishlist: get().wishlist.filter(
-            (item) => item.id !== id
+            (itemId) => itemId !== id
           ),
         });
       },

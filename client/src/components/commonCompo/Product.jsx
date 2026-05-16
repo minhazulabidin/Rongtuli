@@ -27,7 +27,7 @@ const Product = ({ item }) => {
         />
 
         <FaHeart
-          onClick={() => toggleWishlist(item)}
+          onClick={() => toggleWishlist(item.id)}
           className={`absolute top-3 right-3.5 cursor-pointer md:text-xl text-base text-[#99999966] ${wished ? 'text-[#FF5555]' : ''
             }`}
         />
