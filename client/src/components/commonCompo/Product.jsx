@@ -10,7 +10,6 @@ import ReactStars from 'react-stars';
 
 const Product = ({ item }) => {
   const {
-    wishlist,
     toggleWishlist,
     isInWishlist,
   } = useWishlistStore();

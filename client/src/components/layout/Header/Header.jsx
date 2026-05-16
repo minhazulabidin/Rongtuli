@@ -39,7 +39,7 @@ const Header = () => {
             <span className="text-lg font-normal text-gray-700 hidden lg:block">Login</span>
           </button>
 
-          <button className="flex items-center gap-1 cursor-pointer">
+          <Link href="/wishlist" className="flex items-center gap-1 cursor-pointer">
             <div className="relative">
               <Heart size={24} className="md:w-7.5 md:h-7.5" />
               {
@@ -49,7 +49,7 @@ const Header = () => {
               }
             </div>
             <span className="text-lg font-normal hidden lg:block text-gray-700">Wishlist</span>
-          </button>
+          </Link>
 
           <button className="flex items-center gap-2 cursor-pointer">
             <div className="relative">
