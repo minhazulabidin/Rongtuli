@@ -8,7 +8,7 @@ const SortAndShow = () => {
 
     return (
         <div className="items-center justify-between text-sm text-gray-600 mb-5.5! flex">
-            <div>
+            <div className='md:hidden block'>
                 <Sheet>
                     <SheetTrigger className="font-poppins text-[#3D3D3F] flex items-center gap-2 font-medium"><ListFilterPlus /> FILTER</SheetTrigger>
                     <SheetContent side="top" className="h-screen overflow-y-auto scrollbar-thin pb-10">
