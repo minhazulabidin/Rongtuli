@@ -24,13 +24,17 @@ const WishlistProduct = () => {
         }
     }, [wishlist])
     return (
-        <div className="grid md:grid-cols-3 grid-cols-2 md:gap-6.25 gap-3.5">
+       <>
+        {
+            wishlist.length > 0?<div className="grid md:grid-cols-3 grid-cols-2 md:gap-6.25 gap-3.5">
             {
                 products.map(item => (
                     <Product key={item?.data?.id} item={item?.data} />
                 ))
             }
-        </div>
+        </div> : <div className="flex justify-center w-full"><p className="py-52 font-poppins md:text-xl text-md text-orangec font-semibold">No product you added in wish list</p></div>
+        }
+       </>
     )
 }
 
