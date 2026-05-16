@@ -1,19 +1,23 @@
 "use client";
-import React, { useState } from 'react'
+import React from 'react'
 import { ListFilterPlus } from 'lucide-react';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import ShopSidebar from './ShopSidebar';
 
 const SortAndShow = () => {
-    const [filterSheet, setFilterSheet] = useState(false)
 
     return (
         <div className="items-center justify-between text-sm text-gray-600 mb-5.5! flex">
             <div>
-                <p className="font-poppins text-[#3D3D3F] flex items-center gap-2 font-medium"
-                    onClick={() => setFilterSheet(true)}
-                >
-                    <ListFilterPlus />
-                    FILTER
-                </p>
+                <Sheet>
+                    <SheetTrigger className="font-poppins text-[#3D3D3F] flex items-center gap-2 font-medium"><ListFilterPlus /> FILTER</SheetTrigger>
+                    <SheetContent side="top" className="h-screen overflow-y-auto scrollbar-thin pb-10">
+                        <SheetHeader>
+                            <SheetTitle className="font-poppins py-5">FILTER BY</SheetTitle>
+                            <div><ShopSidebar asChild /></div>
+                        </SheetHeader>
+                    </SheetContent>
+                </Sheet>
             </div>
             {/* Left side */}
             <p className='md:block hidden text-lg font-poppins text-[#42424180] font-medium'>
