@@ -1,3 +1,4 @@
+"use client"
 import Container from "@/components/commonCompo/Container";
 import React from "react";
 import logo from "@/assate/image/logo.png";
@@ -5,8 +6,10 @@ import Image from "next/image";
 import { Heart, Search, ShoppingBasket, User } from "lucide-react";
 import Navbar from "./Navbar";
 import Link from "next/link";
+import useWishlistStore from "@/ZustandStore/useWishlistStore";
 
 const Header = () => {
+  const { wishlist } = useWishlistStore();
   return (
     <Container>
       <header className="flex flex-wrap items-center justify-between py-1 md:py-3 font-poppins">
@@ -36,8 +39,15 @@ const Header = () => {
             <span className="text-lg font-normal text-gray-700 hidden lg:block">Login</span>
           </button>
 
-          <button className="flex items-center gap-1">
-            <Heart size={24} className="md:w-7.5 md:h-7.5" />
+          <button className="flex items-center gap-1 cursor-pointer">
+            <div className="relative">
+              <Heart size={24} className="md:w-7.5 md:h-7.5" />
+              {
+                wishlist.length > 0 && <span className="absolute -top-1 -right-2 flex items-center justify-center w-5 h-5 text-[10px] text-white bg-[#FF5D5D] rounded-full">
+                  {wishlist.length}
+                </span>
+              }
+            </div>
             <span className="text-lg font-normal hidden lg:block text-gray-700">Wishlist</span>
           </button>
 

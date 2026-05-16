@@ -1,14 +1,20 @@
 'use client';
 
+import useWishlistStore from '@/ZustandStore/useWishlistStore';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 import { BsBasket } from 'react-icons/bs';
 import { FaHeart } from 'react-icons/fa';
 import ReactStars from 'react-stars';
 
 const Product = ({ item }) => {
-  const [activeLHeart, setActiveLHeart] = useState(false);
+  const {
+    wishlist,
+    toggleWishlist,
+    isInWishlist,
+  } = useWishlistStore();
+  const wished = isInWishlist(item.id);
 
   return (
     <div className="rounded-[10px] border border-[#E9E9E9] p-2.5 flex flex-col justify-between">
@@ -22,8 +28,8 @@ const Product = ({ item }) => {
         />
 
         <FaHeart
-          onClick={() => setActiveLHeart(!activeLHeart)}
-          className={`absolute top-3 right-3.5 cursor-pointer md:text-xl text-base text-[#99999966] ${activeLHeart ? 'text-[#FF5555]' : ''
+          onClick={() => toggleWishlist(item)}
+          className={`absolute top-3 right-3.5 cursor-pointer md:text-xl text-base text-[#99999966] ${wished ? 'text-[#FF5555]' : ''
             }`}
         />
       </div>

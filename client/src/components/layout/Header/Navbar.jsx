@@ -8,6 +8,7 @@ const Navbar = () => {
 
     const [activeMenu, setActiveMenu] = useState("WOMEN'S FASHION");
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  
 
     return (
         <div className="w-full bg-white relative" onMouseLeave={() => setIsMegaMenuOpen(false)}>
