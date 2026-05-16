@@ -62,7 +62,7 @@ function AllPagination({ itemsPerPage }) {
             <ReactPaginate
                 breakLabel="..."
                 nextLabel="Next >"
-                previousLabel=" < Previous"
+                previousLabel=" < Prev"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={2}
                 pageCount={pageCount}

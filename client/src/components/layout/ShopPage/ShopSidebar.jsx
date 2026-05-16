@@ -17,12 +17,12 @@ const categories = [
 
 const ratings = [1, 2, 3, 4, 5];
 
-const ShopSidebar = () => {
-    const [selectedCategory, setSelectedCategory] = useState("Men’s Jacket");
+const ShopSidebar = ({className}) => {
+    const [selectedCategory, setSelectedCategory] = useState("");
     const [selectedRating, setSelectedRating] = useState(0);
 
     return (
-        <section className="mt-10.75 font-poppins md:block hidden">
+        <section className={`mt-10.75 font-poppins ${className}`}>
 
             {/* Categories */}
             <Accordion>
